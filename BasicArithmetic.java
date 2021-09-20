@@ -2,7 +2,7 @@ import java.lang.Math;
 
 public class BasicArithmetic{
 
-  public basicarithmetic(){
+  public BasicArithmetic(){
   }
   
   addition
