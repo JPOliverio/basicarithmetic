@@ -18,11 +18,11 @@ public class BasicArithmetic{
   exponent
   
   // The below section is for converting between binary, octal, hexadecimal, and integers.  
-  public static String inttoBinary(int number){ return Integer.toBinaryString(number);}  //int to binary
+  public static String intToBinary(int number){ return Integer.toBinaryString(number);}  //int to binary
   
-  public static String inttoOctal(int number){ return Integer.toOctalString(number);}  //int to octal
+  public static String intToOctal(int number){ return Integer.toOctalString(number);}  //int to octal
 
-  public static String inttoHex(int number){ return Integer.toHexString(number);}    //int to hexadecimal
+  public static String intToHex(int number){ return Integer.toHexString(number);}    //int to hexadecimal
   
   public static int binaryToInt(String binaryString){ return Integer.parseInt(binaryString,2);} //binary to int
   
