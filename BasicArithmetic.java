@@ -17,15 +17,13 @@ public class BasicArithmetic{
     
   exponent
     
-  toOctal
-    //decimal to octal
-        String octalString = Integer.toOctalString(number);
-        System.out.println("decimal to octal: " + octalString)
+  public static String toOctal(int number){ return Integer.toOctalString(number);}  //int to octal
 
-  toHex
-    //decimal to hexadecimal
-        String hexString = Integer.toHexString(number);
-        System.out.println("decimal to hexadecimal: " + hexString);
+  public static String toHex(int number){ return Integer.toHexString(number);}    //int to hexadecimal
+  
+  public static String toBinary(int number){ return Integer.toBinaryString(number);}  //int to binary
+  public static int binaryToInt(String binaryString){ return Integer.parseInt(binaryString,2);) //binary to int
+
 
   toInt
     
