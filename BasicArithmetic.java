@@ -28,7 +28,7 @@ public class BasicArithmetic{
   
   public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} //octal to int
     
-  public static int haxToInt(String hexadecimalString){ return Integer.parseLong(hexadecimalString,16);} //hexadecimal to int
+  public static int hexToInt(String hexadecimalString){ return Integer.parseLong(hexadecimalString,16);} //hexadecimal to int
   
 
 
