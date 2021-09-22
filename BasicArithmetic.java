@@ -15,19 +15,22 @@ public class BasicArithmetic{
   //Addition for binary string types
   public static String addBinary(String binaryStringX, String binaryStringY){
     float z=0; //place holder for result
-    float x, y = binaryToFloat(binaryStringX), binaryToFloat(binaryStringY);
+    float x = binaryToFloat(binaryStringX);
+    float y = binaryToFloat(binaryStringY);
     z=x+y;
     return floatToBinary(z);}
   //Addition for octal string types
   public static String addOctal(String octalStringX, String octalStringY){
    float z=0; //place holder for result
-   float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
+   float x = octalToFloat(octalStringX);
+   float y = octalToFloat(octalStringY);
    z=x+y;
    return floatToOctal(z);}
   //Addition for hexadecimal types
   public static String addHex(String hexadecimalStringX, String hexadecimalStringY){
    float z=0; //place holder for result
-   float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
+   float x = hexToFloat(hexadecimalStringX);
+   float y = hexToFloat(hexadecimalStringY);
    z=x+y;
    return floatToHex(z);}
     
@@ -122,6 +125,22 @@ public class BasicArithmetic{
   public static int exponentInt(int x, int y){return (int)Math.pow((double)x, (double)y);}
   //Exponent with float
   public static float exponentFloat(float x, float y){return (float)Math.pow((double)x, (double)y);}
+  //Squareroot for binary
+  public static String exponentBinary(String binaryString){ 
+    float x = binaryToFloat(binaryString);
+    float z = (Float)Math.pow((double)x);
+    return floatToBinary(z);}
+  //Squareroot for octal
+  public static String exponentOctal(String octalString){ 
+    float x = octalToFloat(octalString);
+    float z = (Float)Math.pow((double)x);
+    return floatToOctal(z);}
+  //Squareroot for hexadecimal 
+  public static String exponentHex(String hexadecimalString){ 
+    float x = hexToFloat(hexadecimalString);
+    float z = (Float)Math.pow((double)x);
+    return floatToHex(z);}
+  
   
   //*******************Data Type Conversion***********************
   // The below section is for Int converting to binary, octal, and hexadecimal data types.
