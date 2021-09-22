@@ -66,18 +66,35 @@ public class BasicArithmetic{
     }catch(ArithmeticException e){
       z=Integer.MAX_VALUE; //this will represent the closest number to infinity for an int
     }
-    return z;
-  }
+    return z;}
   //Division with float
   public static float divideFloat(float x, float y){
     float z=0;
     try{  // The try-catch is to prevent division by zero. It reports the best represntation for infinity
       z=x/y;
     }catch(ArithmeticException e){
-      z=Float.POSITIVE_INFINITY; //
+      z=Float.POSITIVE_INFINITY; 
     }
-    return z;
-  }
+    return z;}
+  //Division with binary string type
+  public static String divideBinary(String binaryStringX, String binaryStringY){
+    float x = binaryToFloat(binaryStringX);
+    float y = binaryToFloat(binaryStringY);
+    float z = divideFloat(binaryStringX, binaryStringY);
+    return floatToBinary(z);}
+  //Division with octal string type
+  public static String octalBinary(String octalStringX, String octalStringY){
+    float x = octalToFloat(octalStringX);
+    float y = octalToFloat(octalStringY);
+    float z = divideFloat(octalStringX, octalStringY);
+    return floatToOctal(z);}
+  //Division with hexadecimal 
+  public static String hexBinary(String hexadecimalStringX, String hexadecimalStringY){
+    float x = hexToFloat(hexadecimalStringX);
+    float y = hexToFloat(hexadecimalStringY);
+    float z = divideFloat(hexadecimalStringX, hexadecimalStringY);
+    return floatToHex(z);}
+  
   
   //************************Squareroot****************************
   //Squareroot for int
