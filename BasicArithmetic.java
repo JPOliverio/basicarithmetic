@@ -6,32 +6,34 @@ public class BasicArithmetic{
 
   public BasicArithmetic(){
   }
-  
 
-  //addition
+  //**********************Addition*****************************
+  //Addition with int
   public static int addInt(int x, int y){ return x+y;}
-
+  //Addition with float
   public static float addFloat(float x, float y){ return x+y;}
 
-  //subtraction
+  //**********************Subtraction***************************
+  //Subtraction with int
   public static int subtractInt(int x, int y){return x-y;}
-
+  //Subtraction with float
   public static float subtractFloat(float x, float y){return x-y;}
  
-  //division
+  //************************Division*****************************
+  //Division with int
   public static int divideInt(int x, int y){
     int z=0;
-    try{
+    try{  // The try-catch is to prevent division by zero. It reports the best represntation for infinity
       z=x/y;
     }catch(ArithmeticException e){
       z=Integer.MAX_VALUE; //this will represent the closest number to infinity for an int
     }
     return z;
   }
-
+  //Division with float
   public static float divideFloat(float x, float y){
     float z=0;
-    try{
+    try{  // The try-catch is to prevent division by zero. It reports the best represntation for infinity
       z=x/y;
     }catch(ArithmeticException e){
       z=Float.POSITIVE_INFINITY; //
@@ -39,13 +41,16 @@ public class BasicArithmetic{
     return z;
   }
   
-  //squareRoot
+  //************************Squareroot*****************************
+  //Squareroot for int
   public static int sqrtInt(int x){return (int)Math.sqrt((double)x);}
-
+  //Squareroot for float
   public static float sqrtFloat(float x){return (float)Math.sqrt((double)x);}
-
-  //exponent
+  
+  //************************Exponent*****************************
+  //Exponent with int
   public static int exponentInt(int x, int y){return (int)Math.pow((double)x, (double)y);}
+  //Exponent with float
   public static float exponentFloat(float x, float y){return (float)Math.pow((double)x, (double)y);}
   
   // The below section is for converting between binary, octal, hexadecimal, and integers.  
