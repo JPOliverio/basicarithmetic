@@ -101,6 +101,21 @@ public class BasicArithmetic{
   public static int sqrtInt(int x){return (int)Math.sqrt((double)x);}
   //Squareroot for float
   public static float sqrtFloat(float x){return (float)Math.sqrt((double)x);}
+  //Squareroot for binary
+  public static String sqrtBinary(String binaryString){ 
+    float x = binaryToFloat(binaryString);
+    float z = (Float)Math.sqrt((double)x);
+    return floatToBinary(z);}
+  //Squareroot for octal
+  public static String sqrtOctal(String octalString){ 
+    float x = octalToFloat(octalString);
+    float z = (Float)Math.sqrt((double)x);
+    return floatToOctal(z);}
+  //Squareroot for hexadecimal 
+  public static String sqrtHex(String hexadecimalString){ 
+    float x = hexToFloat(hexadecimalString);
+    float z = (Float)Math.sqrt((double)x);
+    return floatToHex(z);}
   
   //************************Exponent*****************************
   //Exponent with int
