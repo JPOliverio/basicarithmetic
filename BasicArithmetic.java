@@ -19,17 +19,17 @@ public class BasicArithmetic{
     z=x+y;
     return floatToBinary(z);}
   //Addition for octal string types
-   public static String addHex(String octalStringX, String octalStringY){
-    float z=0; //place holder for result
-    float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
-    z=x+y;
-    return floatToOctal(z);}
+  public static String addHex(String octalStringX, String octalStringY){
+   float z=0; //place holder for result
+   float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
+   z=x+y;
+   return floatToOctal(z);}
   //Addition for hexadecimal types
-    public static String addHex(String hexadecimalStringX, String hexadecimalStringY){
-     float z=0; //place holder for result
-     float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
-     z=x+y;
-    return floatToHex(z);}
+  public static String addHex(String hexadecimalStringX, String hexadecimalStringY){
+   float z=0; //place holder for result
+   float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
+   z=x+y;
+   return floatToHex(z);}
     
 
   //**********************Subtraction***************************
@@ -37,6 +37,25 @@ public class BasicArithmetic{
   public static int subtractInt(int x, int y){return x-y;}
   //Subtraction with float
   public static float subtractFloat(float x, float y){return x-y;}
+  //Subtraction for binary string types
+  public static String subtractBinary(String binaryStringX, String binaryStringY){
+   float z=0; //place holder for result
+   float x, y = binaryToFloat(binaryStringX), binaryToFloat(binaryStringY);
+   z=x-y;
+   return floatToBinary(z);}
+  //Subtraction for octal string types
+  public static String subtractHex(String octalStringX, String octalStringY){
+   float z=0; //place holder for result
+   float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
+   z=x-y;
+   return floatToOctal(z);}
+  //Subtraction for hexadecimal types
+  public static String subtractHex(String hexadecimalStringX, String hexadecimalStringY){
+   float z=0; //place holder for result
+   float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
+   z=x-y;
+   return floatToHex(z);}
+    
  
   //************************Division*****************************
   //Division with int
@@ -74,6 +93,7 @@ public class BasicArithmetic{
   
   //*******************Data Type Conversion***********************
   // The below section is for Int converting to binary, octal, and hexadecimal data types.
+  
   //int to binary
   public static String intToBinary(int number){ return Integer.toBinaryString(number);} 
   //int to octal
@@ -86,7 +106,9 @@ public class BasicArithmetic{
   public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} 
   //hexadecimal to int
   public static int hexToInt(String hexadecimalString){ return Integer.parseInt(hexadecimalString,16);}
+  
   // The below section is for Float converting to binary, octal, and hexadecimal data types.
+  
   //float to binary
   public static String floatToBinary(float number){ return Float.toBinaryString(number);} 
   //float to octal
