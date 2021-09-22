@@ -8,10 +8,29 @@ public class BasicArithmetic{
   }
 
   //**********************Addition*****************************
-  //Addition with int
+  //Addition with int types
   public static int addInt(int x, int y){ return x+y;}
-  //Addition with float
+  //Addition with float types
   public static float addFloat(float x, float y){ return x+y;}
+  //Addition for binary string types
+  public static String addBinary(String binaryStringX, String binaryStringY){
+    float z=0; //place holder for result
+    float x, y = binaryToFloat(binaryStringX), binaryToFloat(binaryStringY);
+    z=x+y;
+    return floatToBinary(z);}
+  //Addition for octal string types
+   public static String addHex(String octalStringX, String octalStringY){
+    float z=0; //place holder for result
+    float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
+    z=x+y;
+    return floatToOctal(z);}
+  //Addition for hexadecimal types
+    public static String addHex(String hexadecimalStringX, String hexadecimalStringY){
+     float z=0; //place holder for result
+     float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
+     z=x+y;
+    return floatToHex(z);}
+    
 
   //**********************Subtraction***************************
   //Subtraction with int
@@ -41,7 +60,7 @@ public class BasicArithmetic{
     return z;
   }
   
-  //************************Squareroot*****************************
+  //************************Squareroot****************************
   //Squareroot for int
   public static int sqrtInt(int x){return (int)Math.sqrt((double)x);}
   //Squareroot for float
@@ -53,8 +72,8 @@ public class BasicArithmetic{
   //Exponent with float
   public static float exponentFloat(float x, float y){return (float)Math.pow((double)x, (double)y);}
   
-  //*******************Data Type Conversion************************
-  // The below section is for converting between binary, octal, hexadecimal, and integers.  
+  //*******************Data Type Conversion***********************
+  // The below section is for Int converting to binary, octal, and hexadecimal data types.
   //int to binary
   public static String intToBinary(int number){ return Integer.toBinaryString(number);} 
   //int to octal
@@ -67,9 +86,19 @@ public class BasicArithmetic{
   public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} 
   //hexadecimal to int
   public static int hexToInt(String hexadecimalString){ return Integer.parseInt(hexadecimalString,16);}
-  
+  // The below section is for Float converting to binary, octal, and hexadecimal data types.
+  //float to binary
+  public static String floatToBinary(float number){ return Float.toBinaryString(number);} 
+  //float to octal
+  public static String floatToOctal(float number){ return Float.toOctalString(number);} 
+  //float to hexadecimal
+  public static String floatToHex(float number){ return Float.toHexString(number);}   
+  //binary to float
+  public static float binaryToFloat(String binaryString){ return Float.parseFloat(binaryString,2);} 
+  //octal to float
+  public static float octalToFloat(String octalString){ return Float.parseFloat(octalString,8);} 
+  //hexadecimal to float
+  public static float hexToFloat(String hexadecimalString){ return Float.parseFloat(hexadecimalString,16);}
 
 
-  
-  
 }
