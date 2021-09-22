@@ -53,18 +53,20 @@ public class BasicArithmetic{
   //Exponent with float
   public static float exponentFloat(float x, float y){return (float)Math.pow((double)x, (double)y);}
   
+  //*******************Data Type Conversion************************
   // The below section is for converting between binary, octal, hexadecimal, and integers.  
-  public static String intToBinary(int number){ return Integer.toBinaryString(number);}  //int to binary
-  
-  public static String intToOctal(int number){ return Integer.toOctalString(number);}  //int to octal
-
-  public static String intToHex(int number){ return Integer.toHexString(number);}    //int to hexadecimal
-  
-  public static int binaryToInt(String binaryString){ return Integer.parseInt(binaryString,2);} //binary to int
-  
-  public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} //octal to int
-    
-  public static int hexToInt(String hexadecimalString){ return Integer.parseInt(hexadecimalString,16);} //hexadecimal to int
+  //int to binary
+  public static String intToBinary(int number){ return Integer.toBinaryString(number);} 
+  //int to octal
+  public static String intToOctal(int number){ return Integer.toOctalString(number);} 
+  //int to hexadecimal
+  public static String intToHex(int number){ return Integer.toHexString(number);}   
+  //binary to int
+  public static int binaryToInt(String binaryString){ return Integer.parseInt(binaryString,2);} 
+  //octal to int
+  public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} 
+  //hexadecimal to int
+  public static int hexToInt(String hexadecimalString){ return Integer.parseInt(hexadecimalString,16);}
   
 
 
