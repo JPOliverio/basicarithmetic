@@ -19,7 +19,7 @@ public class BasicArithmetic{
     z=x+y;
     return floatToBinary(z);}
   //Addition for octal string types
-  public static String addHex(String octalStringX, String octalStringY){
+  public static String addOctal(String octalStringX, String octalStringY){
    float z=0; //place holder for result
    float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
    z=x+y;
@@ -44,7 +44,7 @@ public class BasicArithmetic{
    z=x-y;
    return floatToBinary(z);}
   //Subtraction for octal string types
-  public static String subtractHex(String octalStringX, String octalStringY){
+  public static String subtractOctal(String octalStringX, String octalStringY){
    float z=0; //place holder for result
    float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
    z=x-y;
