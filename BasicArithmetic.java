@@ -10,54 +10,96 @@ public class BasicArithmetic{
   //**********************Addition*****************************
   //Addition with int types
   public static int addInt(int x, int y){ return x+y;}
+
   //Addition with float types
   public static float addFloat(float x, float y){ return x+y;}
+
   //Addition for binary string types
   public static String addBinary(String binaryStringX, String binaryStringY){
-    float z=0; //place holder for result
-    float x = binaryToFloat(binaryStringX);
-    float y = binaryToFloat(binaryStringY);
+    int z=0; //place holder for result
+    int x = binaryToInt(binaryStringX);
+    int y = binaryToInt(binaryStringY);
     z=x+y;
-    return floatToBinary(z);}
+    return intToBinary(z);}
+
   //Addition for octal string types
   public static String addOctal(String octalStringX, String octalStringY){
-   float z=0; //place holder for result
-   float x = octalToFloat(octalStringX);
-   float y = octalToFloat(octalStringY);
+   int z=0; //place holder for result
+   int x = octalToInt(octalStringX);
+   int y = octalToInt(octalStringY);
    z=x+y;
-   return floatToOctal(z);}
+   return intToOctal(z);}
+
   //Addition for hexadecimal types
   public static String addHex(String hexadecimalStringX, String hexadecimalStringY){
-   float z=0; //place holder for result
-   float x = hexToFloat(hexadecimalStringX);
-   float y = hexToFloat(hexadecimalStringY);
+   int z=0; //place holder for result
+   int x = hexToInt(hexadecimalStringX);
+   int y = hexToInt(hexadecimalStringY);
    z=x+y;
-   return floatToHex(z);}
+   return intToHex(z);}
     
 
   //**********************Subtraction***************************
   //Subtraction with int
   public static int subtractInt(int x, int y){return x-y;}
+
   //Subtraction with float
   public static float subtractFloat(float x, float y){return x-y;}
+
   //Subtraction for binary string types
   public static String subtractBinary(String binaryStringX, String binaryStringY){
-   float z=0; //place holder for result
-   float x, y = binaryToFloat(binaryStringX), binaryToFloat(binaryStringY);
+   int z=0; //place holder for result
+   int x=binaryToInt(binaryStringX);
+   int y=binaryToInt(binaryStringY);
    z=x-y;
-   return floatToBinary(z);}
+   return intToBinary(z);}
+
   //Subtraction for octal string types
   public static String subtractOctal(String octalStringX, String octalStringY){
-   float z=0; //place holder for result
-   float x, y = octalToFloat(octalStringX), octalToFloat(octalStringY);
+   int z=0; //place holder for result
+   int x=octalToInt(octalStringX);
+   int y=octalToInt(octalStringY);
    z=x-y;
-   return floatToOctal(z);}
+   return intToOctal(z);}
+
   //Subtraction for hexadecimal types
   public static String subtractHex(String hexadecimalStringX, String hexadecimalStringY){
-   float z=0; //place holder for result
-   float x, y = hexToFloat(hexadecimalStringX), hexToFloat(hexadecimalStringY);
+   int z=0; //place holder for result
+   int x=hexToInt(hexadecimalStringX);
+   int y=hexToInt(hexadecimalStringY);
    z=x-y;
-   return floatToHex(z);}
+   return intToHex(z);}
+
+  //**********************Multiplication***************************
+  //Multiplication with int
+  public static int multiplicationInt(int x, int y){return x*y;}
+
+  //Multiplication with float
+  public static float multiplicationFloat(float x, float y){return x*y;}
+
+  //Multiplication for binary string types
+  public static String multiplicationBinary(String binaryStringX, String binaryStringY){
+   int z=0; //place holder for result
+   int x=binaryToInt(binaryStringX);
+   int y=binaryToInt(binaryStringY);
+   z=x*y;
+   return intToBinary(z);}
+
+  //Multiplication for octal string types
+  public static String multiplictionOctal(String octalStringX, String octalStringY){
+   int z=0; //place holder for result
+   int x=octalToInt(octalStringX);
+   int y=octalToInt(octalStringY);
+   z=x*y;
+   return intToOctal(z);}
+
+  //Multiplication for hexadecimal types
+  public static String multiplicationHex(String hexadecimalStringX, String hexadecimalStringY){
+   int z=0; //place holder for result
+   int x=hexToInt(hexadecimalStringX);
+   int y=hexToInt(hexadecimalStringY);
+   z=x*y;
+   return intToHex(z);}
     
  
   //************************Division*****************************
@@ -70,6 +112,7 @@ public class BasicArithmetic{
       z=Integer.MAX_VALUE; //this will represent the closest number to infinity for an int
     }
     return z;}
+
   //Division with float
   public static float divideFloat(float x, float y){
     float z=0;
@@ -79,67 +122,81 @@ public class BasicArithmetic{
       z=Float.POSITIVE_INFINITY; 
     }
     return z;}
+
   //Division with binary string type
   public static String divideBinary(String binaryStringX, String binaryStringY){
-    float x = binaryToFloat(binaryStringX);
-    float y = binaryToFloat(binaryStringY);
-    float z = divideFloat(binaryStringX, binaryStringY);
-    return floatToBinary(z);}
+    int x = binaryToInt(binaryStringX);
+    int y = binaryToInt(binaryStringY);
+    int z = divideInt(x,y);
+    return intToBinary(z);}
+
   //Division with octal string type
-  public static String octalBinary(String octalStringX, String octalStringY){
-    float x = octalToFloat(octalStringX);
-    float y = octalToFloat(octalStringY);
-    float z = divideFloat(octalStringX, octalStringY);
-    return floatToOctal(z);}
+  public static String divideOctal(String octalStringX, String octalStringY){
+    int x = octalToInt(octalStringX);
+    int y = octalToInt(octalStringY);
+    int z = divideInt(x,y);
+    return intToOctal(z);}
+
   //Division with hexadecimal 
-  public static String hexBinary(String hexadecimalStringX, String hexadecimalStringY){
-    float x = hexToFloat(hexadecimalStringX);
-    float y = hexToFloat(hexadecimalStringY);
-    float z = divideFloat(hexadecimalStringX, hexadecimalStringY);
-    return floatToHex(z);}
+  public static String divideHex(String hexadecimalStringX, String hexadecimalStringY){
+    int x = hexToInt(hexadecimalStringX);
+    int y = hexToInt(hexadecimalStringY);
+    int z = divideInt(x,y);
+    return intToHex(z);}
   
   
   //************************Squareroot****************************
   //Squareroot for int
   public static int sqrtInt(int x){return (int)Math.sqrt((double)x);}
+
   //Squareroot for float
   public static float sqrtFloat(float x){return (float)Math.sqrt((double)x);}
+
   //Squareroot for binary
   public static String sqrtBinary(String binaryString){ 
-    float x = binaryToFloat(binaryString);
-    float z = (Float)Math.sqrt((double)x);
-    return floatToBinary(z);}
+    int x = binaryToInt(binaryString);
+    int z = (int)Math.sqrt(x);
+    return intToBinary(z);}
+
   //Squareroot for octal
   public static String sqrtOctal(String octalString){ 
-    float x = octalToFloat(octalString);
-    float z = (Float)Math.sqrt((double)x);
-    return floatToOctal(z);}
+    int x = octalToInt(octalString);
+    int z = (int)Math.sqrt(x);
+    return intToOctal(z);}
+
   //Squareroot for hexadecimal 
   public static String sqrtHex(String hexadecimalString){ 
-    float x = hexToFloat(hexadecimalString);
-    float z = (Float)Math.sqrt((double)x);
-    return floatToHex(z);}
+    int x = hexToInt(hexadecimalString);
+    int z = (int)Math.sqrt(x);
+    return intToHex(z);}
   
   //************************Exponent*****************************
   //Exponent with int
   public static int exponentInt(int x, int y){return (int)Math.pow((double)x, (double)y);}
+
   //Exponent with float
   public static float exponentFloat(float x, float y){return (float)Math.pow((double)x, (double)y);}
-  //Squareroot for binary
-  public static String exponentBinary(String binaryString){ 
-    float x = binaryToFloat(binaryString);
-    float z = (Float)Math.pow((double)x);
-    return floatToBinary(z);}
-  //Squareroot for octal
-  public static String exponentOctal(String octalString){ 
-    float x = octalToFloat(octalString);
-    float z = (Float)Math.pow((double)x);
-    return floatToOctal(z);}
-  //Squareroot for hexadecimal 
-  public static String exponentHex(String hexadecimalString){ 
-    float x = hexToFloat(hexadecimalString);
-    float z = (Float)Math.pow((double)x);
-    return floatToHex(z);}
+
+  //Exponent for binary
+  public static String exponentBinary(String binaryStringX, String binaryStringY){ 
+    int x = binaryToInt(binaryStringX);
+    int y = binaryToInt(binaryStringY);
+    int z = (int)Math.pow(x,y);
+    return intToBinary(z);}
+
+  //Exponent for octal
+  public static String exponentOctal(String octalStringX, String octalStringY){ 
+    int x = octalToInt(octalStringX);
+    int y = octalToInt(octalStringY);
+    int z = (int)Math.pow(x,y);
+    return intToOctal(z);}
+
+  //Exponent for hexadecimal 
+  public static String exponentHex(String hexadecimalStringX, String hexadecimalStringY){ 
+    int x = hexToInt(hexadecimalStringX);
+    int y = hexToInt(hexadecimalStringY);
+    int z = (int)Math.pow(x,y);
+    return intToHex(z);}
   
   
   //*******************Data Type Conversion***********************
@@ -157,21 +214,6 @@ public class BasicArithmetic{
   public static int octalToInt(String octalString){ return Integer.parseInt(octalString,8);} 
   //hexadecimal to int
   public static int hexToInt(String hexadecimalString){ return Integer.parseInt(hexadecimalString,16);}
-  
-  // The below section is for Float converting to binary, octal, and hexadecimal data types.
-  
-  //float to binary
-  public static String floatToBinary(float number){ return Float.toBinaryString(number);} 
-  //float to octal
-  public static String floatToOctal(float number){ return Float.toOctalString(number);} 
-  //float to hexadecimal
-  public static String floatToHex(float number){ return Float.toHexString(number);}   
-  //binary to float
-  public static float binaryToFloat(String binaryString){ return Float.parseFloat(binaryString,2);} 
-  //octal to float
-  public static float octalToFloat(String octalString){ return Float.parseFloat(octalString,8);} 
-  //hexadecimal to float
-  public static float hexToFloat(String hexadecimalString){ return Float.parseFloat(hexadecimalString,16);}
 
 
 }
